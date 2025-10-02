@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(do sed -i \"s/@import ''..\\/styles\\/global.scss'';//g\" \"$file\")",
+      "Bash(npm install:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
