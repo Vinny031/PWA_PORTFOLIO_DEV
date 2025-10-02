@@ -3,7 +3,9 @@
     "allow": [
       "Bash(do sed -i \"s/@import ''..\\/styles\\/global.scss'';//g\" \"$file\")",
       "Bash(npm install:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nRefonte complète du portfolio en Vue.js\n\n- Migration de React vers Vue.js avec Vite\n- Création des composants : Header, Hero, About, Skills, Projects, Contact, Footer\n- Intégration du formulaire de contact avec EmailJS\n- Chargement dynamique des projets depuis projects.json\n- Nouveau design moderne des cards de projets\n- Ajout des médias et données des projets (Booki, Sophie Bluel, Nina Carducci, Kasa, Mon Vieux Grimmoire)\n- Configuration responsive pour tous les écrans\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

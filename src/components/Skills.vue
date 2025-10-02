@@ -13,7 +13,7 @@
           class="skill-card"
         >
           <div class="skill-card__icon">
-            <img :src="skill.icon" :alt="skill.name" />
+            <font-awesome-icon :icon="skill.icon" />
           </div>
           <h3 class="skill-card__name">{{ skill.name }}</h3>
           <p class="skill-card__description">{{ skill.description }}</p>
@@ -30,73 +30,73 @@ const skills = reactive([
   {
     id: 1,
     name: 'HTML',
-    icon: '/assets/icon/html.webp',
+    icon: ['fab', 'html5'],
     description: 'Structure sémantique et accessible'
   },
   {
     id: 2,
     name: 'CSS',
-    icon: '/assets/icon/css.webp',
+    icon: ['fab', 'css3-alt'],
     description: 'Design responsive et animations'
   },
   {
     id: 3,
     name: 'JavaScript',
-    icon: '/assets/icon/js.webp',
+    icon: ['fab', 'js'],
     description: 'ES6+ et programmation moderne'
   },
   {
     id: 4,
     name: 'React',
-    icon: '/assets/icon/react.webp',
+    icon: ['fab', 'react'],
     description: 'Interfaces dynamiques et performantes'
   },
   {
     id: 5,
     name: 'Node.js',
-    icon: '/assets/icon/nodejs.webp',
+    icon: ['fab', 'node-js'],
     description: 'Backend scalable et APIs REST'
   },
   {
     id: 6,
     name: 'Express',
-    icon: '/assets/icon/express.webp',
+    icon: ['fas', 'server'],
     description: 'Framework backend robuste'
   },
   {
     id: 7,
     name: 'Database',
-    icon: '/assets/icon/db.webp',
+    icon: ['fas', 'database'],
     description: 'SQL et NoSQL (MongoDB, PostgreSQL)'
   },
   {
     id: 8,
     name: 'API',
-    icon: '/assets/icon/api.webp',
+    icon: ['fas', 'code'],
     description: 'RESTful et GraphQL'
   },
   {
     id: 9,
     name: 'Figma',
-    icon: '/assets/icon/figma.webp',
+    icon: ['fab', 'figma'],
     description: 'Design UI/UX et prototypage'
   },
   {
     id: 10,
     name: 'Git',
-    icon: '/assets/icon/github.webp',
+    icon: ['fab', 'github'],
     description: 'Contrôle de version et collaboration'
   },
   {
     id: 11,
     name: 'VS Code',
-    icon: '/assets/icon/vsc.webp',
+    icon: ['fas', 'code'],
     description: 'Environnement de développement'
   },
   {
     id: 12,
     name: 'Trello',
-    icon: '/assets/icon/trello.webp',
+    icon: ['fab', 'trello'],
     description: 'Gestion de projet agile'
   }
 ])
@@ -200,8 +200,13 @@ const skills = reactive([
     transform: translateY(-8px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 
-    .skill-card__icon img {
-      transform: scale(1.1) rotate(5deg);
+    .skill-card__icon {
+      background: linear-gradient(135deg, rgba(74, 144, 226, 0.2), rgba(74, 144, 226, 0.1));
+
+      svg {
+        transform: scale(1.1) rotate(5deg);
+        color: #667eea;
+      }
     }
   }
 
@@ -220,11 +225,12 @@ const skills = reactive([
       height: 70px;
     }
 
-    img {
+    svg {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      color: #4a90e2;
       transition: all 0.3s ease;
+      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
     }
   }
 

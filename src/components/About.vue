@@ -23,19 +23,18 @@
           </p>
         </div>
 
-        <div class="about__stats">
-          <div class="about__stat">
-            <div class="about__stat-number">{{ stats.experience }}+</div>
-            <div class="about__stat-label">Années d'expérience</div>
+        <div class="about__cv">
+          <div class="about__cv-preview">
+            <img src="/assets/CV_DEV.webp" alt="Aperçu du CV" />
           </div>
-          <div class="about__stat">
-            <div class="about__stat-number">{{ stats.projects }}+</div>
-            <div class="about__stat-label">Projets réalisés</div>
-          </div>
-          <div class="about__stat">
-            <div class="about__stat-number">{{ stats.clients }}+</div>
-            <div class="about__stat-label">Clients satisfaits</div>
-          </div>
+          <a href="/assets/CV_DEV.pdf" download="CV_Vincent_Fuseau.pdf" class="about__cv-button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Télécharger mon CV
+          </a>
         </div>
       </div>
     </div>
@@ -43,13 +42,6 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
-
-const stats = reactive({
-  experience: 3,
-  projects: 25,
-  clients: 15
-})
 </script>
 
 <style lang="scss" scoped>
@@ -116,7 +108,7 @@ const stats = reactive({
     align-items: center;
 
     @media (min-width: 768px) {
-      grid-template-columns: 1.5fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 4rem;
     }
   }
@@ -134,46 +126,67 @@ const stats = reactive({
     }
   }
 
-  &__stats {
-    display: grid;
-    grid-template-columns: 1fr;
+  &__cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
-
-    @media (min-width: 480px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media (min-width: 768px) {
-      grid-template-columns: 1fr;
-    }
   }
 
-  &__stat {
-    text-align: center;
-    padding: 2rem 1rem;
+  &__cv-preview {
+    width: 100%;
+    max-width: 400px;
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     transition: all 0.3s ease;
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
     }
   }
 
-  &__stat-number {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 800;
-    color: #4a90e2;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-  }
+  &__cv-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-  &__stat-label {
-    font-size: clamp(0.875rem, 2vw, 1rem);
-    color: #222222;
-    font-weight: 500;
+    svg {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+
+      svg {
+        transform: translateY(3px);
+      }
+    }
+
+    &:active {
+      transform: translateY(-1px);
+    }
   }
 }
 </style>

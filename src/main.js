@@ -5,6 +5,39 @@ import App from './App.vue'
 import Home from './pages/Home.vue'
 import Error from './pages/Error.vue'
 
+// Font Awesome
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {
+  faHtml5,
+  faCss3Alt,
+  faJs,
+  faReact,
+  faNodeJs,
+  faFigma,
+  faGithub,
+  faTrello
+} from '@fortawesome/free-brands-svg-icons'
+import {
+  faDatabase,
+  faCode,
+  faServer
+} from '@fortawesome/free-solid-svg-icons'
+
+library.add(
+  faHtml5,
+  faCss3Alt,
+  faJs,
+  faReact,
+  faNodeJs,
+  faFigma,
+  faGithub,
+  faTrello,
+  faDatabase,
+  faCode,
+  faServer
+)
+
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -23,4 +56,7 @@ const router = createRouter({
   }
 })
 
-createApp(App).use(router).mount('#root')
+const app = createApp(App)
+app.component('font-awesome-icon', FontAwesomeIcon)
+app.use(router)
+app.mount('#root')
