@@ -9,17 +9,15 @@
       <div class="about__content">
         <div class="about__text">
           <p>
-            Passionné par le développement web et la photographie, je combine créativité et
-            expertise technique pour créer des expériences digitales uniques et mémorables.
+            Je suis actuellement en fin de formation RNCP Niveau 5 en développement web chez OpenClassrooms, et je poursuis mon apprentissage avec une formation en RNCP Niveau 6 en développement d'application JavaScript React.
           </p>
           <p>
-            Avec une solide expérience en développement Full-Stack, je maîtrise les technologies
-            modernes comme React, Vue.js, Node.js et Express pour concevoir des applications
-            web performantes et évolutives.
+            Fort d'un parcours diversifié en gestion forestière, soins, j'ai su développer une forte capacité d'adaptation et de résilience.
+            Mon objectif est de Renforcer mes compétences en développement web, API et gestion de bases de données et Contribuer à des projets concrets et innovants.
           </p>
           <p>
-            Mon approche se concentre sur la qualité du code, l'accessibilité et l'expérience
-            utilisateur, tout en gardant un œil artistique grâce à ma passion pour la photographie.
+            Passionné par l'apprentissage et la résolution de problèmes, je recherche une alternance qui me permettra de Mettre en pratique mes connaissances et évoluer techniquement.
+            Mon expérience dans des secteurs variés m'a permis de développer Rigueur organisationnelle et Communication fluide, atouts précieux dans mon évolution en tant que développeur.
           </p>
         </div>
 

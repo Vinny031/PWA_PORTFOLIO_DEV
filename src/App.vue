@@ -8,7 +8,6 @@
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  // Register service worker for PWA
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
   }
@@ -16,7 +15,6 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-// Reset & Base styles
 *,
 *::before,
 *::after {

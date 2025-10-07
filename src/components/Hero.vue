@@ -6,11 +6,10 @@
           Bonjour, je suis <span class="hero__highlight">Vincent Fuseau</span>
         </h1>
         <p class="hero__subtitle fade-in-up" style="animation-delay: 0.2s">
-          Développeur Web Full-Stack & Photographe Passionné
+          Développeur Web Full-Stack en route vers le B3-M1-M2 | Curieux et rigoureux
         </p>
         <p class="hero__description fade-in-up" style="animation-delay: 0.3s">
-          Je crée des expériences web modernes et performantes avec une attention particulière portée au design et à l'accessibilité.
-        </p>
+          Je conçois des applications modernes avec React/Vue.js et Node.js/Express, alliant performance, accessibilité et sens du détail. Issu d’un parcours pluridisciplinaire, j’apporte adaptabilité, rigueur et une forte envie d’apprendre au service de projets concrets et innovants.        </p>
         <div class="hero__cta fade-in-up" style="animation-delay: 0.4s">
           <a href="#projects" class="btn btn--primary">Voir mes projets</a>
           <a href="#contact" class="btn">Me contacter</a>
