@@ -1,3 +1,4 @@
 .env
+dist
 vite.config.js
 node_modules
