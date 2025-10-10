@@ -2,18 +2,6 @@
   <footer class="footer">
     <div class="footer__container">
       <div class="footer__content">
-
-        <div class="footer__section">
-          <h4 class="footer__title">Navigation</h4>
-          <nav class="footer__nav">
-            <a href="#home" class="footer__link">Accueil</a>
-            <a href="#about" class="footer__link">À propos</a>
-            <a href="#skills" class="footer__link">Compétences</a>
-            <a href="#projects" class="footer__link">Projets</a>
-            <a href="#contact" class="footer__link">Contact</a>
-          </nav>
-        </div>
-
         <div class="footer__section">
           <h4 class="footer__title">Suivez-moi</h4>
           <div class="footer__social">
@@ -51,63 +39,37 @@ const currentYear = computed(() => new Date().getFullYear())
 
 <style lang="scss" scoped>
 .footer {
-  background: linear-gradient(180deg, #111 0%, #1a1a1a 100%);
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
   color: #f5f5f5;
-  padding: 3rem 0;
+  padding: 2.5rem 0 1.5rem;
   font-family: 'Inter', sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 
   &__container {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
   }
 
   &__content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 3rem;
-    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
   }
 
   &__section {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.875rem;
   }
 
   &__title {
-    font-size: 1.125rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
     color: #ffffff;
-    position: relative;
-    margin-bottom: 0.5rem;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 40px;
-      height: 2px;
-      background: #00adb5;
-      margin-top: 0.5rem;
-      border-radius: 2px;
-    }
-  }
-
-  &__nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  &__link {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-
-    &:hover {
-      color: #00adb5;
-      transform: translateX(4px);
-    }
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
   }
 
   &__social {
@@ -116,33 +78,37 @@ const currentYear = computed(() => new Date().getFullYear())
   }
 
   &__social-link {
-    width: 48px;
-    height: 48px;
-    background: rgba(255, 255, 255, 0.08);
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.06);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
     &:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-3px);
+      background: rgba(0, 173, 181, 0.15);
+      border-color: rgba(0, 173, 181, 0.3);
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 173, 181, 0.2);
     }
 
     img {
-      width: 70%;
+      width: 65%;
       filter: brightness(0) invert(1);
+      transition: all 0.3s ease;
     }
   }
 
   &__bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.875rem;
 
     @media (min-width: 768px) {
       flex-direction: row;
@@ -151,22 +117,44 @@ const currentYear = computed(() => new Date().getFullYear())
   }
 
   &__copyright {
-    font-size: 0.9rem;
-    opacity: 0.8;
+    font-size: 0.875rem;
+    opacity: 0.7;
     text-align: center;
+    font-weight: 400;
+    letter-spacing: 0.3px;
   }
 
   &__links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.25rem;
     flex-wrap: wrap;
     justify-content: center;
 
     .footer__link {
-      font-size: 0.9rem;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.7);
+      transition: all 0.3s ease;
+      position: relative;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: #00adb5;
+        transition: width 0.3s ease;
+      }
 
       &:hover {
         color: #00adb5;
+
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
