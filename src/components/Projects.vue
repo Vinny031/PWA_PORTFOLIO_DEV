@@ -121,6 +121,7 @@ const getCategoryFromTypes = (types) => {
 
   const typeString = types.join(' ').toUpperCase()
 
+  if (typeString.includes('FULL-STACK')) return 'Full-Stack'
   if (typeString.includes('BACK-END')) return 'Backend'
   if (typeString.includes('FRONT-END')) return 'Frontend'
   if (typeString.includes('REACT') || typeString.includes('VUE')) return 'Frontend'

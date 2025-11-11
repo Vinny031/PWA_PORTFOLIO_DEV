@@ -96,6 +96,23 @@
       "tags": ["Node.js", "Express", "MongoDB", "JWT", "Bcrypt"],
       "types": ["BACK-END", "EXPRESS", "MONGODB", "JWT", "BCRYPT", "NODE.JS"],
       "year": "2025"
+    },
+    {
+      "id": "6",
+      "title": "Application mobile QR Santé - Accès sécurisé aux données de santé",
+      "description": "QR Santé est une application innovante permettant aux professionnels de santé d'accéder en moins de 10 secondes aux informations vitales d'un patient inconscient via un QR Code sécurisé. Le système repose sur une génération de QR dynamique, un accès temporaire protégé par authentification RPPS et une gestion chiffrée des données de santé conforme au RGPD. J'ai développé cette application mobile avec Vue.js pour l'interface utilisateur et Android Studio pour le déploiement mobile, en intégrant un système d'authentification robuste et une architecture sécurisée pour garantir la confidentialité des données médicales. Ce projet m'a permis de renforcer mes compétences en développement mobile, en sécurité des données sensibles, et en conformité réglementaire, des compétences essentielles pour créer des solutions de santé numérique fiables et sécurisées.",
+      "url_demo": null,
+      "url_gh": "https://github.com/Vinny031/APP_QRSANTE",
+      "video": "/data/medias/app_qrsante/vid_app_qrsante.webm",
+      "images": [
+        "/data/medias/app_qrsante/img_app_qrsante_5.webp",
+        "/data/medias/app_qrsante/img_app_qrsante_1.webp",
+        "/data/medias/app_qrsante/img_app_qrsante_2.webp",
+        "/data/medias/app_qrsante/img_app_qrsante_3.webp"
+      ],
+      "tags": ["Vue.js", "Capacitor", "Android Studio", "CSS", "Git/Github"],
+      "types": ["FULL-STACK", "VUE.JS", "ANDROID STUDIO", "CSS", "GIT/GITHUB"],
+      "year": "2025"
     }
   ]
 }
