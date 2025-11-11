@@ -3,7 +3,7 @@
     <div class="footer__container">
       <div class="footer__content">
         <div class="footer__section">
-          <h4 class="footer__title">Suivez-moi</h4>
+          <h3 class="footer__title">Suivez-moi</h3>
           <div class="footer__social">
             <a
               href="https://github.com/Vinny031?tab=repositories"
