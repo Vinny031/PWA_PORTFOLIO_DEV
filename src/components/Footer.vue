@@ -12,7 +12,7 @@
               class="footer__social-link"
               aria-label="GitHub"
             >
-              <img src="/assets/icon/github.webp" alt="GitHub" />
+              <img src="/assets/icon/github.webp" alt="GitHub" loading="lazy" width="27" height="27" />
             </a>
           </div>
         </div>

@@ -17,7 +17,7 @@
       </div>
       <div class="hero__visual fade-in" style="animation-delay: 0.5s">
         <div class="hero__avatar">
-          <img src="/assets/icon/avatar-3d.webp" alt="Vincent Fuseau" />
+          <img src="/assets/icon/avatar-3d.webp" alt="Vincent Fuseau" fetchpriority="high" />
         </div>
         <div class="hero__decoration"></div>
       </div>

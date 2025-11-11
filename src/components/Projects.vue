@@ -28,7 +28,7 @@
           class="project-card"
         >
           <div class="project-card__image">
-            <img :src="project.image" :alt="project.title" loading="lazy" />
+            <img :src="project.image" :alt="project.title" loading="lazy" width="671" height="320" />
             <div class="project-card__overlay">
               <a
                 v-if="project.demo"

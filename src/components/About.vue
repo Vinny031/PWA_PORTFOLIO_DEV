@@ -23,7 +23,7 @@
 
         <div class="about__cv">
           <div class="about__cv-preview">
-            <img src="/assets/CV_DEV.webp" alt="Aperçu du CV" />
+            <img src="/assets/CV_DEV.webp" alt="Aperçu du CV" loading="lazy" width="349" height="494" />
           </div>
           <a href="/assets/CV_DEV.pdf" download="CV_Vincent_Fuseau.pdf" class="about__cv-button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
