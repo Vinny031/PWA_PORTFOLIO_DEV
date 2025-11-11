@@ -97,8 +97,8 @@ onMounted(async () => {
       image: project.images && project.images[0] ? project.images[0] : '/assets/icon/data.webp',
       technologies: project.tags || [],
       category: getCategoryFromTypes(project.types),
-      demo: project.url,
-      github: project.url.includes('github.com') ? project.url : null,
+      demo: project.url_demo || null,
+      github: project.url_gh || null,
       year: project.year
     }))
 
