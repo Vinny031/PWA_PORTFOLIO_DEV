@@ -24,14 +24,14 @@
         <div class="about__cv">
           <div class="about__cv-preview" @click="openCVModal">
             <img src="/assets/CV_DEV.webp" alt="Aperçu du CV" loading="lazy" width="349" height="494" />
+            <div class="about__cv-overlay">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <span>Cliquer pour voir</span>
+            </div>
           </div>
-          <button @click="openCVModal" class="about__cv-button">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-              <circle cx="12" cy="12" r="3"/>
-            </svg>
-            Voir mon CV
-          </button>
         </div>
       </div>
     </div>
@@ -181,7 +181,6 @@ onUnmounted(() => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
   }
 
   &__cv-preview {
@@ -193,10 +192,15 @@ onUnmounted(() => {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     transition: all 0.3s ease;
     cursor: pointer;
+    position: relative;
 
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+
+      .about__cv-overlay {
+        opacity: 1;
+      }
     }
 
     img {
@@ -207,38 +211,34 @@ onUnmounted(() => {
     }
   }
 
-  &__cv-button {
-    display: inline-flex;
+  &__cv-overlay {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    background: rgba(102, 126, 234, 0.95);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
-    padding: 1.25rem 2.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
     color: white;
-    font-size: 1.125rem;
-    font-weight: 600;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.3);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     svg {
-      width: 24px;
-      height: 24px;
-      transition: transform 0.3s ease;
+      width: 48px;
+      height: 48px;
+      animation: pulse 2s ease-in-out infinite;
     }
 
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
-
-      svg {
-        transform: scale(1.1);
-      }
-    }
-
-    &:active {
-      transform: translateY(-1px);
+    span {
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
   }
 }
@@ -275,8 +275,8 @@ onUnmounted(() => {
 
   &__close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: -1rem;
+    right: -1rem;
     width: 40px;
     height: 40px;
     background: rgba(0, 0, 0, 0.7);
@@ -352,6 +352,17 @@ onUnmounted(() => {
 .modal-enter-from .cv-modal__content,
 .modal-leave-to .cv-modal__content {
   transform: scale(0.9);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
 }
 
 </style>
